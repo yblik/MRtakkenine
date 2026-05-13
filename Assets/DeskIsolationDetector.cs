@@ -3,7 +3,7 @@ using UnityEngine;
 public class DeskIsolationDetector : MonoBehaviour
 {
     [Header("Raycast Settings")]
-    public float checkDistance = 1.0f;
+    public float checkDistance = 8;
     public LayerMask deskMask;
 
     [Header("Debug")]
@@ -14,18 +14,24 @@ public class DeskIsolationDetector : MonoBehaviour
 
     void Update()
     {
-        bool leftHit = Physics.Raycast(transform.position, -transform.right, checkDistance, deskMask);
-        bool rightHit = Physics.Raycast(transform.position, transform.right, checkDistance, deskMask);
 
-        // If neither side detects another desk isolated
-        isIsolated = !(leftHit || rightHit);
+        float checkRadius = 0.2f;
+
+        Vector3 leftPos = transform.position - transform.right;
+        Vector3 rightPos = transform.position + transform.right;
+
+        bool leftHit = Physics.CheckSphere(leftPos, checkRadius, deskMask);
+        bool rightHit = Physics.CheckSphere(rightPos, checkRadius, deskMask);
+
+        isIsolated = !leftHit && !rightHit;
+
 
         if (isIsolated)
         {
             EPOS.SetActive(true);
             Desk.SetActive(false);
             Debug.Log("Desk is isolated.");
-        }   
+        }
     }
 
     void OnDrawGizmosSelected()
