@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2013301715410206415}
   m_Layer: 0
-  m_Name: EPOS
+  m_Name: EPOSstand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,7 +311,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 6993679758650649345, guid: a45f56782d3c15844a73e16a7c49e732,
+      objectReference: {fileID: 2325816828320229964, guid: a45f56782d3c15844a73e16a7c49e732,
         type: 3}
     - target: {fileID: 721639075881387345, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}

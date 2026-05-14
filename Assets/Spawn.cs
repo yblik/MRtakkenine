@@ -10,7 +10,7 @@ public class Spawn : MonoBehaviour
 
     private void Start()
     {
-        if ( !Once && DELAY)
+        if ( !Once && !DELAY)
         {
                     Vector3 spawnPos = transform.TransformPoint(offset);
         Instantiate(prefab, spawnPos, transform.rotation);
