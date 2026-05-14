@@ -12,6 +12,8 @@ public class DeskIsolationDetector : MonoBehaviour
     public GameObject Desk;
     public GameObject EPOS;
 
+    public Spawn shelfSpawn;
+
     void Update()
     {
 
@@ -31,6 +33,10 @@ public class DeskIsolationDetector : MonoBehaviour
             EPOS.SetActive(true);
             Desk.SetActive(false);
             Debug.Log("Desk is isolated.");
+        }
+        else
+        {
+            shelfSpawn.SpawnIn();
         }
     }
 

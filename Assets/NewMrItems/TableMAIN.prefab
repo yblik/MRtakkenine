@@ -127,6 +127,7 @@ MonoBehaviour:
   isIsolated: 0
   Desk: {fileID: 8436413946214872155}
   EPOS: {fileID: 8720699580727282173}
+  shelfSpawn: {fileID: 3851043378022043151}
 --- !u!1 &6333797037989396366
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +389,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 568575834326500220, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}
+      propertyPath: DELAY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 568575834326500220, guid: e8b3c0254dcfb804cacafc4805933139,
+        type: 3}
       propertyPath: prefab
       value: 
       objectReference: {fileID: 1416292460460029031, guid: 1af28b5f1ed97284a9309d4979171571,
@@ -463,6 +469,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3644075349026327923}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3851043378022043151 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 568575834326500220, guid: e8b3c0254dcfb804cacafc4805933139,
+    type: 3}
+  m_PrefabInstance: {fileID: 3644075349026327923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be78b97a321dcd4cb63c930d66beb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6452744400262279594
 PrefabInstance:
   m_ObjectHideFlags: 0
