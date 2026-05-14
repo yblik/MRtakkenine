@@ -41,7 +41,7 @@ public class DisplayLabel : MonoBehaviour
             labelText.transform.rotation =
                 Quaternion.LookRotation(-hit.normal);
 
-            labelText.text = "anchor: " + anchor.Label.ToString();
+            labelText.text = "anchor: " + anchor.AnchorLabels.ToString();
         }
     }
 }

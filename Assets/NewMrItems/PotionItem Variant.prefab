@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a660f9d3a7c5e4fb3d8bf68bae48c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxWobble: 0.02
-  WobbleSpeed: 1.5
-  Recovery: 2.5
+  MaxWobble: 0.05
+  WobbleSpeed: 1
+  Recovery: 1
 --- !u!1 &6620883824495790200
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,9 +195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a660f9d3a7c5e4fb3d8bf68bae48c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxWobble: 0.02
-  WobbleSpeed: 1.5
-  Recovery: 2.5
+  MaxWobble: 0.05
+  WobbleSpeed: 1
+  Recovery: 1
 --- !u!1001 &278429243000113563
 PrefabInstance:
   m_ObjectHideFlags: 0
