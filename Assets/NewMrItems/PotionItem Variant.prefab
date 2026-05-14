@@ -216,6 +216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotionItem Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1604094377791155991, guid: 528d977d520874548b13f630d439fc72,
+        type: 3}
+      propertyPath: m_TagString
+      value: Itemns
+      objectReference: {fileID: 0}
     - target: {fileID: 1853242237019542537, guid: 528d977d520874548b13f630d439fc72,
         type: 3}
       propertyPath: instanceId
