@@ -104,7 +104,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.5615935, y: 0.6429701, z: 1.9358497}
   m_Center: {x: -0.01597333, y: -0.1287885, z: -0.0032186508}
@@ -320,7 +320,7 @@ PrefabInstance:
     - target: {fileID: 1402302832576129803, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.294
       objectReference: {fileID: 0}
     - target: {fileID: 1402302832576129803, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}
@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 1402302832576129803, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.295
       objectReference: {fileID: 0}
     - target: {fileID: 1402302832576129803, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}
@@ -397,6 +397,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spaewn
       objectReference: {fileID: 0}
+    - target: {fileID: 721639075881387345, guid: e8b3c0254dcfb804cacafc4805933139,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1402302832576129803, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -405,7 +410,7 @@ PrefabInstance:
     - target: {fileID: 1402302832576129803, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1402302832576129803, guid: e8b3c0254dcfb804cacafc4805933139,
         type: 3}

@@ -6891,6 +6891,75 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - Title: Spawn spatial anchor
+    Button: 1
+    ButtonMode: 0
+    InputActionReference: {fileID: 0}
+    CallbackWithContext:
+      m_PersistentCalls:
+        m_Calls: []
+    Callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1032831081}
+          m_TargetAssemblyTypeName: Meta.XR.BuildingBlocks.SpatialAnchorSpawnerBuildingBlock,
+            Meta.XR.BuildingBlocks
+          m_MethodName: SpawnSpatialAnchor
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Title: Load and spawn spatial anchors
+    Button: 2
+    ButtonMode: 0
+    InputActionReference: {fileID: 0}
+    CallbackWithContext:
+      m_PersistentCalls:
+        m_Calls: []
+    Callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1032831080}
+          m_TargetAssemblyTypeName: Meta.XR.BuildingBlocks.SpatialAnchorLoaderBuildingBlock,
+            Meta.XR.BuildingBlocks
+          m_MethodName: LoadAnchorsFromDefaultLocalStorage
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Title: Erase all spatial anchors
+    Button: 32768
+    ButtonMode: 0
+    InputActionReference: {fileID: 0}
+    CallbackWithContext:
+      m_PersistentCalls:
+        m_Calls: []
+    Callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 912588061}
+          m_TargetAssemblyTypeName: Meta.XR.BuildingBlocks.SpatialAnchorCoreBuildingBlock,
+            Meta.XR.BuildingBlocks
+          m_MethodName: EraseAllAnchors
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &268486325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21957,6 +22026,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 542313490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &912588060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912588063}
+  - component: {fileID: 912588062}
+  - component: {fileID: 912588061}
+  m_Layer: 0
+  m_Name: '[BuildingBlock] Spatial Anchor Core'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &912588061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912588060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af86c86a626dba44ba7d1d4ebd5bdad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onAnchorCreateCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAnchorsLoadCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAnchorsEraseAllCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAnchorEraseCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &912588062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912588060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockId: a383f5ea-3856-4c23-a11c-7fdbb9408035
+  instanceId: cb236ee6-38a8-48d1-94ce-74a3c26a3a5e
+  version: 1
+  installationRoutineCheckpoint:
+    _installationRoutineId: 
+    _installationVariants: []
+--- !u!4 &912588063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912588060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &917078524
 GameObject:
   m_ObjectHideFlags: 0
@@ -25609,6 +25753,98 @@ MonoBehaviour:
   m_FlexibleWidth: 0.5
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!1 &1032831078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032831083}
+  - component: {fileID: 1032831082}
+  - component: {fileID: 1032831081}
+  - component: {fileID: 1032831080}
+  - component: {fileID: 1032831079}
+  m_Layer: 0
+  m_Name: '[BuildingBlock] Sample Spatial Anchor Controller'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1032831079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032831078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec2d2da14aa8c6439e25d13c5247ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1032831080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032831078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726f9b8f93c8a3e4bb34dc18134b0858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1032831081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032831078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc6a23b88361f8498219ac2b71b4317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anchorPrefab: {fileID: 789684486510353890, guid: d257e772d439e664db46073b17aadedf,
+    type: 3}
+  _followHand: 1
+--- !u!114 &1032831082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032831078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockId: 1f4566e8-f4ba-46d2-9e47-3748c9869766
+  instanceId: c99f3ce0-0ce8-4f16-b5cb-0b501d18c2ba
+  version: 1
+  installationRoutineCheckpoint:
+    _installationRoutineId: 
+    _installationVariants: []
+--- !u!4 &1032831083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032831078}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034261114
 GameObject:
   m_ObjectHideFlags: 0
@@ -40407,9 +40643,9 @@ MonoBehaviour:
     Scaling: 0
     Alignment: 0
     IgnorePrefabSize: 0
-  - Labels: 4
+  - Labels: 8192
     Prefabs:
-    - {fileID: 2087999599100656279, guid: 89d6816f524b88b4c9968fd91bc3322b, type: 3}
+    - {fileID: 3767424144999017247, guid: fd214e74e77672f4eb586e92fbe2f122, type: 3}
     PrefabSelection: 0
     MatchAspectRatio: 0
     CalculateFacingDirection: 0
@@ -49987,3 +50223,5 @@ SceneRoots:
   - {fileID: 268486326}
   - {fileID: 51515069}
   - {fileID: 1649514482}
+  - {fileID: 912588063}
+  - {fileID: 1032831083}

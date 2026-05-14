@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject prefab;      // assign in Inspector
-    public Vector3 offset;         // spawn offset from this object
+    public GameObject prefab;
+    public Vector3 offset;
 
-    private void Awake()
+    bool Once = false;
+
+    private void Start()
     {
-        Vector3 spawnPos = transform.position + offset;
-        Instantiate(prefab, spawnPos, Quaternion.identity);
+        if ( !Once)
+        {
+                    Vector3 spawnPos = transform.TransformPoint(offset);
+        Instantiate(prefab, spawnPos, transform.rotation);
+            Once = true;
+        }
+
     }
 }
