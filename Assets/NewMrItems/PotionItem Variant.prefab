@@ -286,6 +286,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6393666678469281502, guid: 528d977d520874548b13f630d439fc72,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7638876098938060931, guid: 528d977d520874548b13f630d439fc72,
         type: 3}
       propertyPath: m_Enabled
@@ -310,6 +315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Price
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214040467283156012, guid: 528d977d520874548b13f630d439fc72,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

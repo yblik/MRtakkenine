@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387459740702519130}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &408134125435826373
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &1058072302828901808
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &1161461104516329899
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +295,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161461104516329899}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -516,7 +519,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -568,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &2549139322897635806
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &2663950645584770761
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &3402393409960863678
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +691,7 @@ Transform:
   m_GameObject: {fileID: 3402393409960863678}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.677, z: 0}
+  m_LocalPosition: {x: 0, y: -0.603, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -740,6 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &4372905065739948659
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &4581836742407974646
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +877,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4581836742407974646}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -974,7 +982,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5474925311358771730}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1076,6 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &6643009071517022442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &6800812596484516531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  DELAY: 0
 --- !u!1 &7031681044482303600
 GameObject:
   m_ObjectHideFlags: 0
