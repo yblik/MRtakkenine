@@ -245,7 +245,7 @@ namespace Meta.XR.MRUtilityKit.Samples
             // No rotation needed if the prefab is already a flat XZ quad.
             // If the prefab is upright (tall in Y) swap these euler values to taste
             // after checking the debug log.
-            go.transform.localRotation = Quaternion.identity;
+            go.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
 
             // Stand the prefab off the wall surface along the anchor local Y (normal).
             go.transform.localPosition = new Vector3(0f, _wallArtStandoffOffset, 0f);
