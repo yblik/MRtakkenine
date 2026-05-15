@@ -5,11 +5,23 @@ using UnityEngine;
 public class Scanner : MonoBehaviour
 {
     public AudioSource AS;
+    public EPOSsystem  EPOSsystem;
+    private ProductData currentPD;
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Itemns")
         {
             AS.Play();
+                 currentPD = other.GetComponentInParent<ProductData>();
+
+            EPOSsystem.AddedToCart(currentPD.ID);
+            EPOSsystem.AddItem(currentPD.Name, currentPD.Price);
+
+
         }
+    }
+    public void ItemDisplayOver() //call in animation with things being disabled beforehand via parenting
+    {
+        EPOSsystem.AddItem(currentPD.Name, currentPD.Price);
     }
 }
