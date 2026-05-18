@@ -139,8 +139,8 @@ namespace Meta.XR.MRUtilityKit.Samples
                 //   size.y = room Z extent  (depth)
                 //   size.z = vertical thickness of the slab
                 var vol = anchor.VolumeBounds.Value;
-                surfaceWidth = vol.size.x;
-                surfaceDepth = vol.size.y;
+                surfaceWidth = vol.size.x + 5;
+                surfaceDepth = vol.size.y + 5;
                 surfaceThickness = vol.size.z;
             }
             else

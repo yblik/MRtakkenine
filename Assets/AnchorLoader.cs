@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class AnchorLoader : MonoBehaviour
 {
-    public GameObject prefabToSpawn;
+    public List<GameObject> prefabsToSpawn;
 
     async void Start()
     {
-        // Wait for Quest tracking to initialize
         await System.Threading.Tasks.Task.Delay(2000);
-
         await LoadAnchors();
     }
 
     public async System.Threading.Tasks.Task LoadAnchors()
     {
         List<Guid> anchorGuids = GetSavedAnchorGuids();
-
         if (anchorGuids.Count == 0)
         {
             Debug.Log("No saved anchors found.");
@@ -40,13 +37,26 @@ public class AnchorLoader : MonoBehaviour
 
         Debug.Log($"Loaded {unboundAnchors.Count} anchors.");
 
-        foreach (var unbound in unboundAnchors)
+        for (int i = 0; i < unboundAnchors.Count; i++)
         {
-            // Localize anchor
+            var unbound = unboundAnchors[i];
+
+            if (i >= prefabsToSpawn.Count)
+            {
+                Debug.LogWarning($"No prefab assigned for anchor index {i}, skipping.");
+                continue;
+            }
+
+            GameObject prefab = prefabsToSpawn[i];
+            if (prefab == null)
+            {
+                Debug.LogWarning($"Prefab at index {i} is null, skipping.");
+                continue;
+            }
+
             if (!unbound.Localized)
             {
                 bool localized = await unbound.LocalizeAsync();
-
                 if (!localized)
                 {
                     Debug.LogWarning($"Failed to localize {unbound.Uuid}");
@@ -54,54 +64,35 @@ public class AnchorLoader : MonoBehaviour
                 }
             }
 
-            // Temporary anchor object just to get position
             GameObject temp = new GameObject("TempAnchor");
-
-            OVRSpatialAnchor anchor =
-                temp.AddComponent<OVRSpatialAnchor>();
-
+            OVRSpatialAnchor anchor = temp.AddComponent<OVRSpatialAnchor>();
             unbound.BindTo(anchor);
 
-            // Wait for transform update
             await System.Threading.Tasks.Task.Yield();
             await System.Threading.Tasks.Task.Yield();
 
             Vector3 position = anchor.transform.position;
-
             Destroy(temp);
 
-            // Spawn prefab with ZERO rotation
-            Instantiate(
-                prefabToSpawn,
-                position,
-                Quaternion.identity
-            );
-
-            Debug.Log($"Spawned prefab at {position}");
+            Instantiate(prefab, position, Quaternion.identity);
+            Debug.Log($"Spawned prefab[{i}] ({prefab.name}) at {position}");
         }
     }
 
     private List<Guid> GetSavedAnchorGuids()
     {
         List<Guid> guids = new();
-
         int count = PlayerPrefs.GetInt("numUuids", 0);
-
         for (int i = 0; i < count; i++)
         {
             string key = "uuid" + i;
-
             if (PlayerPrefs.HasKey(key))
             {
                 string uuidString = PlayerPrefs.GetString(key);
-
                 if (Guid.TryParse(uuidString, out Guid guid))
-                {
                     guids.Add(guid);
-                }
             }
         }
-
         return guids;
     }
 }

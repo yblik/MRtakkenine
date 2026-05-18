@@ -19,6 +19,7 @@ public class Scanner : MonoBehaviour
             EPOSsystem.AddItem(currentPD.Name, currentPD.Price);
             Anim.Play("Scanner");
             FindObjectOfType<NotificationManager>().AddToCartNotif(currentPD.name);
+            Destroy(other.gameObject);
 
 
         }

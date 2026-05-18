@@ -22465,7 +22465,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6d24d080d0b24428db7b897232b7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 0}
+  prefabsToSpawn:
+  - {fileID: 8217760636114089834, guid: b512178f60e1f6e43b87c692df600152, type: 3}
+  - {fileID: 2484038749660203520, guid: d9d285952bb60a840a8ba9c3179bff67, type: 3}
+  - {fileID: 88967904618560864, guid: 02d1666009a35484fa4ef0b541b94d95, type: 3}
+  - {fileID: 8217760636114089834, guid: b512178f60e1f6e43b87c692df600152, type: 3}
 --- !u!114 &912588065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22517,7 +22521,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912588060}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c731c3ef015399409cbce5712f1fd84, type: 3}
   m_Name: 
