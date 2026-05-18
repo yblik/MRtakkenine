@@ -16,7 +16,12 @@ public class EPOSsystem : MonoBehaviour
 
     //all items
     public GameObject  GhostPotion;
+    public GameObject  GhostPouch;
+    public GameObject GhostBucket;
     public GameObject GhostSkull;
+    public GameObject GhostLamp;
+    public GameObject GhostKey;
+    public GameObject GhostVase;
 
     public string items;
 
@@ -54,9 +59,29 @@ public class EPOSsystem : MonoBehaviour
         {
             GhostPotion.SetActive(true);
         }
+            if (ItemID == 2)
+            {
+                GhostPouch.SetActive(true);
+            }
+            if (ItemID == 3)
+            {
+                GhostBucket.SetActive(true);
+        }
         if (ItemID == 4)
         {
             GhostSkull.SetActive(true);
+        }
+        if (ItemID == 5)
+        {
+            GhostLamp.SetActive(true);  
+        }
+        if (ItemID == 6)
+        {
+            GhostKey.SetActive(true);
+        }
+        if (ItemID == 7)
+        {
+            GhostVase.SetActive(true);
         }
         Anim.Play("AddItemAnim");
 
@@ -65,6 +90,12 @@ public class EPOSsystem : MonoBehaviour
     public void ClearGHost()
     {
         GhostPotion.SetActive(false);
+        GhostPouch.SetActive(false);
+        GhostBucket.SetActive(false);
         GhostSkull.SetActive(false);
+        GhostLamp.SetActive(false);
+        GhostKey.SetActive(false);
+        GhostVase.SetActive(false);
+
     }
 }
