@@ -19,9 +19,19 @@ public class NotificationManager : MonoBehaviour
         BuyText.text = Item + "Has been added to cart!";
         BuyAnim.Play("Buying");
     }
+    public void NoAddToCartNotif() //paying or adding to cart?
+    {
+        BuyText.text = "Nothing removed since there's nothing to remove";
+        BuyAnim.Play("Buying");
+    }
     public void PayForNotif(string Items)
     {
         BuyText.text = Items + " have been paid for!";
+        BuyAnim.Play("Buying");
+    }
+    public void PayForNothhign()
+    {
+        BuyText.text = "Nothing has been purchased as nothings in cart";
         BuyAnim.Play("Buying");
     }
     public void DisplayHand(string Item, bool Hand) 

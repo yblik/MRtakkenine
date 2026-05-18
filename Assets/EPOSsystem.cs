@@ -32,10 +32,19 @@ public class EPOSsystem : MonoBehaviour
 
     public void Buy() //play buy sound 
     {
-        FindObjectOfType<NotificationManager>().PayForNotif(items);
-        ItemCount = 0;
-        LastPrice = 0;
-        items = null;
+        if (items != null)
+        {
+            FindObjectOfType<NotificationManager>().PayForNotif(items);
+            ItemCount = 0;
+            LastPrice = 0;
+            items = null;
+        }
+        else       
+        {
+            FindObjectOfType<NotificationManager>().PayForNothhign();
+        }
+
+
     }
     public void AddItem(string Name, int Price)
     {
@@ -47,8 +56,17 @@ public class EPOSsystem : MonoBehaviour
     }
     public void RemoveOne()
     {
-        PriceTotal -= LastPrice;
-        ItemCount--;
+
+        if (items != null)
+        {
+            PriceTotal -= LastPrice;
+            ItemCount--;
+        }
+        else
+        {
+
+                      FindObjectOfType<NotificationManager>().NoAddToCartNotif();
+        }
     }
 
     //animations need to be handled

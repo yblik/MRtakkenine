@@ -402,7 +402,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1558191310096770700, guid: 275b5fa22c2c62041945aec1e36ba471, type: 3}
+  - {fileID: 1558191310096770700, guid: 49c3c9c029bb0574fb405b2e35f1633e, type: 3}
+  - {fileID: 7888757524485758939, guid: e933ad970e1a8ed4887dac6650982fcd, type: 3}
   - {fileID: 7888757524485758939, guid: 2d7da57e8860ca04c9740a2032b45e49, type: 3}
+  - {fileID: 7888757524485758939, guid: d5621b98201fa964cb2bd46d50b58998, type: 3}
+  - {fileID: 1558191310096770700, guid: 3d4569ff33807eb468e0a62f325b0d16, type: 3}
+  - {fileID: 7888757524485758939, guid: bc2f8e1d62491554f944f4db93a3f934, type: 3}
   spawners:
   - {fileID: 1716103458906030463}
   - {fileID: 297572551426897838}
