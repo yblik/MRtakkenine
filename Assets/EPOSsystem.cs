@@ -18,6 +18,8 @@ public class EPOSsystem : MonoBehaviour
     public GameObject  GhostPotion;
     public GameObject GhostSkull;
 
+    public string items;
+
     private void Update()
     {
         ItemTotalTXT.text = "Items: " + ItemCount.ToString() + " Total: £" + PriceTotal.ToString();
@@ -25,8 +27,10 @@ public class EPOSsystem : MonoBehaviour
 
     public void Buy() //play buy sound 
     {
+        FindObjectOfType<NotificationManager>().PayForNotif(items);
         ItemCount = 0;
         LastPrice = 0;
+        items = null;
     }
     public void AddItem(string Name, int Price)
     {
@@ -34,6 +38,7 @@ public class EPOSsystem : MonoBehaviour
         LastPrice = Price;
         ItemCount++;
         PriceTotal += Price;
+        items = items + "," + Name;
     }
     public void RemoveOne()
     {

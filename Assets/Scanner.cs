@@ -7,6 +7,7 @@ public class Scanner : MonoBehaviour
     public AudioSource AS;
     public EPOSsystem  EPOSsystem;
     private ProductData currentPD;
+    public Animator Anim;
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Itemns")
@@ -16,6 +17,8 @@ public class Scanner : MonoBehaviour
 
             EPOSsystem.AddedToCart(currentPD.ID);
             EPOSsystem.AddItem(currentPD.Name, currentPD.Price);
+            Anim.Play("Scanner");
+            FindObjectOfType<NotificationManager>().AddToCartNotif(currentPD.name);
 
 
         }
